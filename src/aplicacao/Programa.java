@@ -43,7 +43,12 @@ public class Programa {
 
 				if (partida.getPromovido() != null) {
 					System.out.print("Escolha uma peça para Promoção(T/C/B/R): ");
-					String tipo = sc.nextLine();
+					String tipo = sc.nextLine().toUpperCase();
+
+					while (!tipo.equals("B") && !tipo.equals("T") && !tipo.equals("C") && !tipo.equals("R")) {
+						System.out.print("Valor invalido! Escolha novamente(T/C/B/R): ");
+						tipo = sc.nextLine().toUpperCase();
+					}
 					partida.trocarPecaPromovida(tipo);
 				}
 
