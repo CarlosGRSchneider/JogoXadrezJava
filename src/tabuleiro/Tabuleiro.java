@@ -39,14 +39,14 @@ public class Tabuleiro {
 			throw new TabuleiroException("Posição inválida");
 		}
 		
-		if(existePosicao(posicao)) {
-			throw new TabuleiroException("Há uma peça nesta posição");
-		}
-		
 		return pecas[posicao.getLinha()][posicao.getColuna()];
 	}
 	
 	public void inserePeca(Peca peca, Posicao posicao) {
+		if(existePosicao(posicao)) {
+			throw new TabuleiroException("Há uma peça nesta posição");
+		}
+		
 		pecas[posicao.getLinha()][posicao.getColuna()] = peca;
 		peca.posicao = posicao;
 	}

@@ -112,11 +112,11 @@ public class UI {
 		List<PecaXadrez> black = captured.stream().filter(x -> x.getCor() == Cor.PRETO)
 				.collect(Collectors.toList());
 		System.out.println("Peças capturadas:");
-		System.out.print("Branco: ");
+		System.out.print("Brancas: ");
 		System.out.print(ANSI_WHITE);
 		System.out.println(Arrays.toString(white.toArray()));
 		System.out.print(ANSI_RESET);
-		System.out.print("Preto: ");
+		System.out.print("Pretas: ");
 		System.out.print(ANSI_YELLOW);
 		System.out.println(Arrays.toString(black.toArray()));
 		System.out.print(ANSI_RESET);
