@@ -43,8 +43,8 @@ public class Tabuleiro {
 	}
 	
 	public void inserePeca(Peca peca, Posicao posicao) {
-		if(existePosicao(posicao)) {
-			throw new TabuleiroException("Há uma peça nesta posição");
+		if(existePeca(posicao)) {
+			throw new TabuleiroException("Há uma peça na posicao " + posicao);
 		}
 		
 		pecas[posicao.getLinha()][posicao.getColuna()] = peca;
