@@ -50,7 +50,7 @@ public class PartidaXadrez {
 		return checkMate;
 	}
 
-	public PecaXadrez enPassantVulneravel() {
+	public PecaXadrez getenPassantVulneravel() {
 		return enPassantVulneravel;
 	}
 
@@ -97,12 +97,13 @@ public class PartidaXadrez {
 
 		if (testaCheckMate(oponente(jogadorAtual))) {
 			checkMate = true;
+		} else {
+			proximaJogada();
 		}
 
-		proximaJogada();
 
 		if (pecaMovida instanceof Peao
-				&& (destino.getColuna() == origem.getColuna() - 2 || destino.getColuna() == origem.getColuna() + 2)) {
+				&& (destino.getLinha() == origem.getLinha() - 2 || destino.getLinha() == origem.getLinha() + 2)) {
 			enPassantVulneravel = pecaMovida;
 		} else {
 			enPassantVulneravel = null;
@@ -186,9 +187,9 @@ public class PartidaXadrez {
 			if (origem.getColuna() != destino.getColuna() && pecaCapturada == null) {
 				Posicao posicaoDoPeao;
 				if (peca.getCor() == Cor.BRANCO) {
-					posicaoDoPeao = new Posicao(destino.getLinha(), destino.getColuna() + 1);
+					posicaoDoPeao = new Posicao(destino.getLinha() + 1, destino.getColuna());
 				} else {
-					posicaoDoPeao = new Posicao(destino.getLinha(), destino.getColuna() - 1);
+					posicaoDoPeao = new Posicao(destino.getLinha() - 1, destino.getColuna());
 				}
 				pecaCapturada = tabuleiro.removePeca(posicaoDoPeao);
 				pecasCapturadas.add(pecaCapturada);
@@ -239,9 +240,9 @@ public class PartidaXadrez {
 				PecaXadrez peao = (PecaXadrez) tabuleiro.removePeca(destino);
 				Posicao posicaoDoPeao;
 				if (peca.getCor() == Cor.BRANCO) {
-					posicaoDoPeao = new Posicao(3, destino.getColuna() + 1);
+					posicaoDoPeao = new Posicao(3, destino.getColuna());
 				} else {
-					posicaoDoPeao = new Posicao(4, destino.getColuna() - 1);
+					posicaoDoPeao = new Posicao(4, destino.getColuna());
 				}
 				tabuleiro.inserePeca(peao, posicaoDoPeao);
 			}
@@ -373,6 +374,7 @@ public class PartidaXadrez {
 
 	public boolean[][] movimentosPossiveis(PosicaoXadrez posicaoOrigem) {
 		Posicao posicao = posicaoOrigem.montaPosicao();
+		validaPosicaoOrigem(posicao);
 		return tabuleiro.posicaoPeca(posicao).movimentosPossiveis();
 	}
 }

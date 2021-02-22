@@ -22,17 +22,17 @@ public class Programa {
 			try {
 				UI.clearScreen();
 				UI.printMatch(partida, capturadas);
-				InterfaceDoJogo.desenhoDoTabuleiro(partida.pecasDoJogo());
 				System.out.println();
-				System.out.print("Origem");
+				System.out.print("Origem: ");
 				PosicaoXadrez origem = UI.readChessPosition(sc);
+//				InterfaceDoJogo.desenhoDoTabuleiro(partida.pecasDoJogo());
 
 				boolean[][] movimentosPossiveis = partida.movimentosPossiveis(origem);
 				UI.clearScreen();
 				UI.printBoard(partida.pecasDoJogo(), movimentosPossiveis);
 
 				System.out.println();
-				System.out.print("Destino");
+				System.out.print("Destino: ");
 				PosicaoXadrez destino = UI.readChessPosition(sc);
 
 				PecaXadrez pecaCapturada = partida.fazerMovimentoXadrez(origem, destino);

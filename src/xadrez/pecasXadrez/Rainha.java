@@ -28,7 +28,7 @@ public class Rainha extends PecaXadrez {
 			matriz[pos.getLinha()][pos.getColuna()] = true;
 			pos.setLinha(pos.getLinha() - 1);
 		}
-		if (getTabuleiro().existePosicao(pos) && existePecaOponente(posicao)) {
+		if (getTabuleiro().existePosicao(pos) && existePecaOponente(pos)) {
 			matriz[pos.getLinha()][pos.getColuna()] = true;
 		}
 
@@ -38,7 +38,7 @@ public class Rainha extends PecaXadrez {
 			matriz[pos.getLinha()][pos.getColuna()] = true;
 			pos.setColuna(pos.getColuna() - 1);
 		}
-		if (getTabuleiro().existePosicao(pos) && existePecaOponente(posicao)) {
+		if (getTabuleiro().existePosicao(pos) && existePecaOponente(pos)) {
 			matriz[pos.getLinha()][pos.getColuna()] = true;
 		}
 
@@ -48,7 +48,7 @@ public class Rainha extends PecaXadrez {
 			matriz[pos.getLinha()][pos.getColuna()] = true;
 			pos.setColuna(pos.getColuna() + 1);
 		}
-		if (getTabuleiro().existePosicao(pos) && existePecaOponente(posicao)) {
+		if (getTabuleiro().existePosicao(pos) && existePecaOponente(pos)) {
 			matriz[pos.getLinha()][pos.getColuna()] = true;
 		}
 
@@ -58,7 +58,7 @@ public class Rainha extends PecaXadrez {
 			matriz[pos.getLinha()][pos.getColuna()] = true;
 			pos.setLinha(pos.getLinha() + 1);
 		}
-		if (getTabuleiro().existePosicao(pos) && existePecaOponente(posicao)) {
+		if (getTabuleiro().existePosicao(pos) && existePecaOponente(pos)) {
 			matriz[pos.getLinha()][pos.getColuna()] = true;
 		}
 
@@ -68,7 +68,7 @@ public class Rainha extends PecaXadrez {
 			matriz[pos.getLinha()][pos.getColuna()] = true;
 			pos.setValores(pos.getLinha() - 1, pos.getColuna() - 1);
 		}
-		if (getTabuleiro().existePosicao(pos) && existePecaOponente(posicao)) {
+		if (getTabuleiro().existePosicao(pos) && existePecaOponente(pos)) {
 			matriz[pos.getLinha()][pos.getColuna()] = true;
 		}
 
@@ -78,7 +78,7 @@ public class Rainha extends PecaXadrez {
 			matriz[pos.getLinha()][pos.getColuna()] = true;
 			pos.setValores(pos.getLinha() - 1, pos.getColuna() + 1);
 		}
-		if (getTabuleiro().existePosicao(pos) && existePecaOponente(posicao)) {
+		if (getTabuleiro().existePosicao(pos) && existePecaOponente(pos)) {
 			matriz[pos.getLinha()][pos.getColuna()] = true;
 		}
 
@@ -88,7 +88,7 @@ public class Rainha extends PecaXadrez {
 			matriz[pos.getLinha()][pos.getColuna()] = true;
 			pos.setValores(pos.getLinha() + 1, pos.getColuna() - 1);
 		}
-		if (getTabuleiro().existePosicao(pos) && existePecaOponente(posicao)) {
+		if (getTabuleiro().existePosicao(pos) && existePecaOponente(pos)) {
 			matriz[pos.getLinha()][pos.getColuna()] = true;
 		}
 
@@ -98,7 +98,7 @@ public class Rainha extends PecaXadrez {
 			matriz[pos.getLinha()][pos.getColuna()] = true;
 			pos.setValores(pos.getLinha() + 1, pos.getColuna() + 1);
 		}
-		if (getTabuleiro().existePosicao(pos) && existePecaOponente(posicao)) {
+		if (getTabuleiro().existePosicao(pos) && existePecaOponente(pos)) {
 			matriz[pos.getLinha()][pos.getColuna()] = true;
 		}
 

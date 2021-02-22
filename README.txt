@@ -1,8 +1,9 @@
 # JogoXadrezJava
 
-Projeto desenvolvido no cruso de Java do professor Nelio Alves.
+Projeto foi desenvolvido no curso de Java do professor Nelio Alves.
 
-A implementação foi feita me baseando nas aulas, e a unica classe que eu não escrevi foi a UI.java
+A implementação foi feita me baseando nas aulas, e a unica classe que eu não escrevi foi a UI.java.
+As classes de teste não fazem parte do curso; eu criei todas elas com o jUnit 5.
 
 O programa se divide em 3 partes:
 * o pacote tabuleiro, que contém as classes com a abstração inicial, de como uma peça, um tabuleiro e uma posição devem se comportar
