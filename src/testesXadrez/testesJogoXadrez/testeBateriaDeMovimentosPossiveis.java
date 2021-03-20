@@ -14,7 +14,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import xadrez.PartidaXadrez;
 import xadrez.PosicaoXadrez;
 
-class testeBateriaDeMovimentosPossiveis {
+class TesteBateriaDeMovimentosPossiveis {
 
 	private static PartidaXadrez partida;
 	private static PosicaoXadrez origem;
